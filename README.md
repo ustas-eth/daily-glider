@@ -25,3 +25,6 @@ If you're already familiar with smart contracts in general, I'd suggest you to:
 
 Otherwise, start with [this awesome repo](https://github.com/OffcierCia/DeFi-Developer-Road-Map)!
 
+## Articles
+
+1. [Get Started](./articles/get-started/README.md)
