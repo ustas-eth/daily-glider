@@ -28,3 +28,4 @@ Otherwise, start with [this awesome repo](https://github.com/OffcierCia/DeFi-Dev
 ## Articles
 
 1. [Get Started](./articles/get-started/README.md)
+2. [Limit and Offset](./articles/limit-and-offset/README.md)
