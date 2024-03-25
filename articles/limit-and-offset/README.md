@@ -54,3 +54,5 @@ Imagine you have a total pool of 4000 contracts:
 ```
 
 These parameters are very handy in debugging when unsure what contract is causing an error.
+
+## Read next: [Arbitrary Logic](../arbitrary-logic/README.md)
