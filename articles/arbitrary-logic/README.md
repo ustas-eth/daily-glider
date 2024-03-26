@@ -100,3 +100,5 @@ def query():
 And our beautiful glide is done! It'll output all the event names from the first ten contracts in the DB with the "ERC721" name:
 
 ![Result](./media/result.png)
+
+## Read next: [Boosting the declarative part](../boosting-declarative-part/README.md)

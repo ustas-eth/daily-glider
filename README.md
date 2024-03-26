@@ -30,3 +30,4 @@ Otherwise, start with [this awesome repo](https://github.com/OffcierCia/DeFi-Dev
 1. [Get Started](./articles/get-started/README.md)
 2. [Limit and Offset](./articles/limit-and-offset/README.md)
 3. [Arbitrary Logic](./articles/arbitrary-logic/README.md)
+4. [Boosting the declarative part](./articles/boosting-declarative-part/README.md)
