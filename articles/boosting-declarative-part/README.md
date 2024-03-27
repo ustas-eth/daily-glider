@@ -94,3 +94,5 @@ I have a few tips for you when it comes to the performance during combinations:
 3. It's also useful to think about the size of the data you operate with and the complexity of operations. It's better to filter out as much as you can with simple operations before getting to complex ones like filtration by function signature.
 
 Mix and experiment!
+
+## Read next: [Debug Technique](../debug-technique/README.md)
