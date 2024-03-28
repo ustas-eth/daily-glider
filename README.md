@@ -32,3 +32,4 @@ Otherwise, start with [this awesome repo](https://github.com/OffcierCia/DeFi-Dev
 3. [Arbitrary Logic](./articles/arbitrary-logic/README.md)
 4. [Boosting the declarative part](./articles/boosting-declarative-part/README.md)
 5. [Debug Technique](./articles/debug-technique/README.md)
+6. [Functions](./articles/functions/README.md)
