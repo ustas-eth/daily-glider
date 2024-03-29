@@ -64,3 +64,5 @@ The `Functions` object has three methods to filter by the special `MethodProp` p
 You can apply different combinations. The query will return nothing if there is a conflict (e.g., you put `MethodProp.HAS_STATE_VARIABLES_WRITTEN` and `MethodProp.IS_PURE` in `.with_all_properties()`, which obviously is impossible).
 
 See the complete list of properties in the [documentation](https://glide.gitbook.io/api/methodprop).
+
+## Read next: [Instructions](../instructions/README.md)
