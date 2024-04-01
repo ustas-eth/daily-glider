@@ -34,3 +34,4 @@ Otherwise, start with [this awesome repo](https://github.com/OffcierCia/DeFi-Dev
 5. [Debug Technique](./articles/debug-technique/README.md)
 6. [Functions](./articles/functions/README.md)
 7. [Instructions](./articles/instructions/README.md)
+8. [Contracts](./articles/contracts/README.md)
