@@ -75,3 +75,5 @@ def query():
     return result
 
 ```
+
+## Read next: [Setup and Writing Style](../setup-and-style/README.md)
