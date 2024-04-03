@@ -106,3 +106,5 @@ def process(instructions):
     return result
 
 ```
+
+## Read next: [Contract](../contract/README.md)
