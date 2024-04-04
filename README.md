@@ -37,3 +37,4 @@ Otherwise, start with [this awesome repo](https://github.com/OffcierCia/DeFi-Dev
 8. [Contracts](./articles/contracts/README.md)
 9. [Setup and Writing Style](./articles/setup-and-style/README.md)
 10. [Contract](./articles/contract/README.md)
+11. [Function](./articles/function/README.md)
