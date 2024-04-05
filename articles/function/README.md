@@ -84,3 +84,5 @@ Then, in the `check_transfer_argument()` Python function, I query the function's
 The glide is unfinished because of the empty `check_requirements()` in the end. There should be some algorithm to check whether the `from` variable is used in a `require` or `if`.
 
 You can try to modify it and finish the function, I don't mind, just show me what it looks like afterward :)
+
+## Read next: [Instruction](../instruction/README.md)
