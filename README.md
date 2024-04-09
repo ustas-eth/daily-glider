@@ -40,3 +40,4 @@ Otherwise, start with [this awesome repo](https://github.com/OffcierCia/DeFi-Dev
 11. [Function](./articles/function/README.md)
 12. [Instruction](./articles/instruction/README.md)
 13. [Low-Level Data (part 1)](./articles/low-level-data-1/README.md)
+14. [Low-Level Data (part 2)](./articles/low-level-data-2/README.md)

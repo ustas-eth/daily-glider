@@ -136,3 +136,5 @@ The output is just "VRFRequestIDBase".
 All these values have corresponding methods in `Callable` or `Function`, which are more efficient, so I don't recommend using `.dump_into_json()` for anything other than debug.
 
 `Modifier.dump_into_json()` has the same structure. You can check if you change the declarative query to use `Modifiers` in the glide above.
+
+## Read next: [Low-Level Data (part 2)](../low-level-data-2/README.md)
