@@ -51,7 +51,7 @@ def query():
 
 This doesn't make much sense at the moment because the result of this glide is identical to the one without these modifications :D
 
-Anyway, now we have individual access to every `Contract` instance from our DB request. What can we do with it? Let's check the [Contract API documentation](https://glide.gitbook.io/api/contract)... `Contract.events()` looks promising.
+Anyway, now we have individual access to every `Contract` instance from our DB request. What can we do with it? Let's check the [Contract API documentation](https://glide.gitbook.io/main/api/contract)... `Contract.events()` looks promising.
 
 Add the method call:
 
@@ -77,7 +77,7 @@ As you can see in the documentation, the method returns `List[Event]` type. I'll
 
 1. Save the events to a new variable.
 2. Loop through again.
-3. Call one of the `Event` properties or methods ([docs](https://glide.gitbook.io/api/event)) to get any serializable value, like `.name`.
+3. Call one of the `Event` properties or methods ([docs](https://glide.gitbook.io/main/api/event)) to get any serializable value, like `.name`.
 4. Change the return statement using the trick from [Get Started](../get-started/README.md)
 
 ```python

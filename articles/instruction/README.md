@@ -54,7 +54,7 @@ The most useful methods are:
 - The group of `.is_if()`, `.is_return()`, and other methods repeating the child classes above to check whether a particular instruction is an instance
 - `.source_code()`
 
-See them all [here](https://glide.gitbook.io/api/instruction).
+See them all [here](https://glide.gitbook.io/main/api/instruction).
 
 I'll talk about some of these methods in other articles because they can be pretty tricky to grasp at once, like the dataflow or instruction data.
 

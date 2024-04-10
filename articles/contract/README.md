@@ -29,7 +29,7 @@ def query():
 
 ```
 
-We can't do much with the declarative query anymore without descending to `Functions` or `Instructions`, but there are still many methods for the logic in the loop. About 20, to be precise, check the [documentation](https://glide.gitbook.io/api/contract).
+We can't do much with the declarative query anymore without descending to `Functions` or `Instructions`, but there are still many methods for the logic in the loop. About 20, to be precise, check the [documentation](https://glide.gitbook.io/main/api/contract).
 
 The most useful are:
 

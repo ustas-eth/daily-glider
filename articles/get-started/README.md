@@ -4,8 +4,8 @@ Alright, straight to business?
 
 First things first, get familiar with these links; you'll need to use them quite often:
 
-- [Official guidelines](https://glide.gitbook.io/main/v/glider)
-- [API documentation](https://glide.gitbook.io/api)
+- [Official guidelines](https://glide.gitbook.io/main)
+- [API documentation](https://glide.gitbook.io/main/api)
 - [Glider itself](https://glide.r.xyz/)
 - [#glider channel in Discord](https://discord.gg/remedy)
 - [Security wiki](https://wiki.r.security/wiki/Main_Page) by Remedy to find interesting attack vectors (or [contribute](https://wiki.r.security/w/index.php?title=Special:CreateAccount) yours!)
@@ -38,9 +38,9 @@ contract HelloWorld {
 }
 ```
 
-Below, under the `Results` tab, you will find the total number of such contracts, the total memory usage, and the execution time. The memory and execution times are currently [limited](https://glide.gitbook.io/main/v/glider/limitations).
+Below, under the `Results` tab, you will find the total number of such contracts, the total memory usage, and the execution time. The memory and execution times are currently [limited](https://glide.gitbook.io/main/limitations).
 
-Read more about the web interface in the guidelines: [Usage](https://glide.gitbook.io/main/v/glider/usage).
+Read more about the web interface in the guidelines: [Usage](https://glide.gitbook.io/main/usage).
 
 ## Line by line
 
@@ -68,7 +68,7 @@ Inside this function, you can see the glide's declarative part:
     contracts = Contracts().with_name("HelloWorld").exec()
 ```
 
-From the [guidelines](https://glide.gitbook.io/main/v/glider/writing-gliders):
+From the [guidelines](https://glide.gitbook.io/main/writing-gliders):
 
 > A glider code can be separated into two parts: declarative queries (also called online part) and imperative arbitrary logic part (offline part)
 
@@ -76,9 +76,9 @@ I'll explain this distinction in more detail in the following articles.
 
 For now, you just need to understand what it does, which is very obvious:
 
-1. `Contracts()` is used to get access to all the contracts on a blockchain ([docs](https://glide.gitbook.io/api/contracts))
-2. `.with_name("HelloWorld")` filters out only those with the specified name ([docs](https://glide.gitbook.io/api/contracts/contracts.with_name))
-3. `.exec()` indicates the end of this request ([docs](https://glide.gitbook.io/api/contracts/contracts.exec))
+1. `Contracts()` is used to get access to all the contracts on a blockchain ([docs](https://glide.gitbook.io/main/api/contracts))
+2. `.with_name("HelloWorld")` filters out only those with the specified name ([docs](https://glide.gitbook.io/main/api/contracts/contracts.with_name))
+3. `.exec()` indicates the end of this request ([docs](https://glide.gitbook.io/main/api/contracts/contracts.exec))
 
 The `contracts` variable will contain `List[Contract]`, which you can loop through or just return as was done in the glide:
 

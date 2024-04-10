@@ -48,7 +48,7 @@ The pragma version is 0.8.1, and it has a struct with the name `Config`, too, ju
     }
 ```
 
-The contract's name is `DebtVault`, so I assume it's supposed to keep money. It also inherits from `Administrable`, which seems similar to the usual `Ownable`, and `ERC721Lite`, obviously a variation of the ERC721 standard, which I never heard of. You can try to get their source codes with `Contract.parent_contracts()` ([docs](https://glide.gitbook.io/api/contract/contract.parent_contracts)) like this:
+The contract's name is `DebtVault`, so I assume it's supposed to keep money. It also inherits from `Administrable`, which seems similar to the usual `Ownable`, and `ERC721Lite`, obviously a variation of the ERC721 standard, which I never heard of. You can try to get their source codes with `Contract.parent_contracts()` ([docs](https://glide.gitbook.io/main/api/contract/contract.parent_contracts)) like this:
 
 ```python
 from glider import *

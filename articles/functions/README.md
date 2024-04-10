@@ -10,7 +10,7 @@ With `Functions`, you can perform filtration by:
 - Modifiers
 - Special properties (such as the Solidity function visibility)
 
-> All the methods and properties of `Callables` ([docs](https://glide.gitbook.io/api/callables)) also apply to `Functions` ([docs](https://glide.gitbook.io/api/functions)) because the latter is a child class. Don't forget to look at both classes when searching for a method in the documentation.
+> All the methods and properties of `Callables` ([docs](https://glide.gitbook.io/main/api/callables)) also apply to `Functions` ([docs](https://glide.gitbook.io/main/api/functions)) because the latter is a child class. Don't forget to look at both classes when searching for a method in the documentation.
 
 ## Example
 
@@ -63,6 +63,6 @@ The `Functions` object has three methods to filter by the special `MethodProp` p
 
 You can apply different combinations. The query will return nothing if there is a conflict (e.g., you put `MethodProp.HAS_STATE_VARIABLES_WRITTEN` and `MethodProp.IS_PURE` in `.with_all_properties()`, which obviously is impossible).
 
-See the complete list of properties in the [documentation](https://glide.gitbook.io/api/methodprop).
+See the complete list of properties in the [documentation](https://glide.gitbook.io/main/api/methodprop).
 
 ## Read next: [Instructions](../instructions/README.md)

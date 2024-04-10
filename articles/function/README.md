@@ -21,7 +21,7 @@ From the most important methods, I can highlight the following:
 - `.modifiers()` to get the `Modifiers` object
 - `.dump_into_json()`, I'll make an additional article about it
 
-There are about 40 methods in total, so make sure to check them all in the documentation [1](https://glide.gitbook.io/api/function) and [2](https://glide.gitbook.io/api/callable).
+There are about 40 methods in total, so make sure to check them all in the documentation [1](https://glide.gitbook.io/main/api/function) and [2](https://glide.gitbook.io/main/api/callable).
 
 ## Example
 

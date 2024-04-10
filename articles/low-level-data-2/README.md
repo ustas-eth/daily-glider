@@ -145,7 +145,7 @@ It returns the following JSON:
 It's quite lengthy, I know. Let's make some sense out of it:
 
 1. Check out `node` and `type` to understand what the instruction looks like and what type it has.
-2. `callees`, `operands`, and `dest` arrays contain data equal to the return values of the corresponding `.get_*` methods in `Instruction` (e.g., [`.get_operands()`](https://glide.gitbook.io/api/instruction/instruction.get_operands)).
+2. `callees`, `operands`, and `dest` arrays contain data equal to the return values of the corresponding `.get_*` methods in `Instruction` (e.g., [`.get_operands()`](https://glide.gitbook.io/main/api/instruction/instruction.get_operands)).
 3. Obviously, `variables_read` and `variables_written` contain the variables this instruction uses.
 4. `irs` describes the same instruction but in a more detailed way, step-by-step.
 
