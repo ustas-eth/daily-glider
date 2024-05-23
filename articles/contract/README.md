@@ -112,4 +112,7 @@ def query():
 
 > Don't forget to add `.exec()` after these methods because they return `Contracts` too. It's the same as with the declarative query in the beggining of glides, you can change the limit and the offset or add more filtration and descend to functions/instructions.
 
+> [!WARNING]
+> UPD. Change `.interfaces` to `.interface_contracts` if you run this query on the mainnet Glider.
+
 ## Read next: [Function](../function/README.md)

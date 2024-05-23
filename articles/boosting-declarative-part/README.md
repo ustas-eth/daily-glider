@@ -56,6 +56,9 @@ flowchart TD
 
 _\*You can get `Variables` from a `Contract` instance_
 
+> [!WARNING]
+> UPD. It's now `StateVariables` on the mainnet (newer) version of Glider and in the documentation; keep in mind that there are differences between the versions.
+
 E.g., if you add `.functions()` to the glide above, you'll get `List[Function]`, where each is without modifiers and contains `selfdestruct` as one of their instructions.
 
 ```python

@@ -35,6 +35,9 @@ def query():
     return result
 ```
 
+> [!WARNING]
+> UPD. Change `.instruction_data` to `.instruction_data()` if you run this query on the mainnet Glider because it's now a method.
+
 It returns the following JSON:
 
 ```js

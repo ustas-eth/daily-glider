@@ -38,6 +38,9 @@ def query():
 
 ```
 
+> [!WARNING]
+> UPD. Change `.name_prefixes` to `.with_name_prefixes` if you run this query on the mainnet Glider.
+
 This glide returns all functions with the name `deposit*` or `withdraw*`, at least one argument of the `address` type, public or external visibility, and without any modifiers.
 
 Like this one (from the results):
@@ -63,6 +66,6 @@ The `Functions` object has three methods to filter by the special `MethodProp` p
 
 You can apply different combinations. The query will return nothing if there is a conflict (e.g., you put `MethodProp.HAS_STATE_VARIABLES_WRITTEN` and `MethodProp.IS_PURE` in `.with_all_properties()`, which obviously is impossible).
 
-See the complete list of properties in the [documentation](https://glide.gitbook.io/main/api/methodprop).
+See the complete list of properties in the [documentation](https://glide.gitbook.io/main/api/callables/methodprop).
 
 ## Read next: [Instructions](../instructions/README.md)

@@ -2,7 +2,7 @@
 
 Your proficiency with `Instruction` and `Function` can be significantly increased if you know how to look into the deeper level of what they contain.
 
-Today, I'll introduce you to the `.dump_into_json()` ([docs](https://glide.gitbook.io/main/api/callable/callable.dump_into_json)) method.
+Today, I'll introduce you to the `.dump_into_json()` method.
 
 ## dump_into_json()
 
