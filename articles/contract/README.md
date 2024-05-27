@@ -38,7 +38,7 @@ The most useful are:
 - `.address()`, returns the address of a contract
 - `.enums/errors/events/structs()`, they are similar, return a list of the corresponding objects
 - `.functions()`, to get the `Functions` of a contract
-- `.variables()`, to get the `Variables` object, which contains the storage variables of a contract
+- `.state_variables()`, to get the `StateVariables` object, which contains the storage variables of a contract
 - `.modifiers()`, same as the two above, but `Modifiers` (what did you expect)
 - `.parent_contracts()`
 - `.base_contracts()`
@@ -94,7 +94,7 @@ from glider import *
 def query():
     contracts = (
         Contracts()
-        .interfaces()
+        .interface_contracts()
         .with_name("IERC20")
         .exec(1)
     )
@@ -111,8 +111,5 @@ def query():
 ```
 
 > Don't forget to add `.exec()` after these methods because they return `Contracts` too. It's the same as with the declarative query in the beggining of glides, you can change the limit and the offset or add more filtration and descend to functions/instructions.
-
-> [!WARNING]
-> UPD. Change `.interfaces` to `.interface_contracts` if you run this query on the mainnet Glider.
 
 ## Read next: [Function](../function/README.md)

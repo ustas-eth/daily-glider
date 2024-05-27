@@ -21,7 +21,7 @@ from glider import *
 def query():
     functions = (
         Functions()
-        .name_prefixes(["deposit", "withdraw"])
+        .with_name_prefixes(["deposit", "withdraw"])
         .with_arg_type("address")
         .with_one_property([MethodProp.PUBLIC, MethodProp.EXTERNAL])
         .with_all_properties([MethodProp.HAS_STATE_VARIABLES_WRITTEN])
@@ -37,9 +37,6 @@ def query():
     return result
 
 ```
-
-> [!WARNING]
-> UPD. Change `.name_prefixes` to `.with_name_prefixes` if you run this query on the mainnet Glider.
 
 This glide returns all functions with the name `deposit*` or `withdraw*`, at least one argument of the `address` type, public or external visibility, and without any modifiers.
 

@@ -14,7 +14,7 @@ Good day to learn about the `Function` methods, isn't it? `Function` is the seco
 From the most important methods, I can highlight the following:
 
 - The group of property methods (`.is_internal()`, `.is_public()`, `.is_payable()`, etc.)
-- The group of `Instructions` getters (`.if_instruction()`, `.asm_instructions()`, etc.)
+- The group of `Instructions` getters (`.if_instructions()`, `.asm_instructions()`, etc.)
 - `.signature()`, `.hashed_signature()`, and `.name()`
 - `.get_contract()` to step up to the contract
 - `.arguments()` to get the `Arguments` object
@@ -37,10 +37,10 @@ def query():
         .with_one_property([MethodProp.EXTERNAL, MethodProp.PUBLIC])
         .with_all_properties([MethodProp.HAS_CALLEES])
         .with_arg_type("address")
-        .with_modifiers_name_not(["onlyOwner", "onlyRole", "onlyAdmin"])
+        .without_modifier_name(["onlyOwner", "onlyRole", "onlyAdmin"])
         .instructions()
         .external_calls()
-        .with_called_function_name("transferFrom")
+        .with_callee_function_name("transferFrom")
         .exec(100)
     )
 
@@ -64,7 +64,7 @@ def check_transfer_argument(instruction, function):
     calls = instruction.get_callee_values()
 
     for call in calls:
-        if call.get_signature() == "transferFrom(address,address,uint256)":
+        if call.signature == "transferFrom(address,address,uint256)":
             addr_from = call.get_args()[0]
 
             for function_addr_arg in function_addr_args:

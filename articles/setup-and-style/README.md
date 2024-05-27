@@ -44,7 +44,7 @@ def query():
   ins = Functions()\
     .with_one_property([MethodProp.EXTERNAL, MethodProp.PUBLIC])\
     .without_properties([MethodProp.HAS_MODIFIERS,MethodProp.IS_CONSTRUCTOR])\
-    .instructions().with_called_function_name("selfdestruct").exec(1)
+    .instructions().with_callee_function_name("selfdestruct").exec(1)
   x = []
   for i in ins:
    x.append(i.get_parent())
@@ -63,7 +63,7 @@ def query():
         .with_one_property([MethodProp.EXTERNAL, MethodProp.PUBLIC])
         .without_properties([MethodProp.HAS_MODIFIERS, MethodProp.IS_CONSTRUCTOR])
         .instructions()
-        .with_called_function_name("selfdestruct")
+        .with_callee_function_name("selfdestruct")
         .exec(1)
     )
 
@@ -89,7 +89,7 @@ def query():
         .with_one_property([MethodProp.EXTERNAL, MethodProp.PUBLIC])
         .without_properties([MethodProp.HAS_MODIFIERS, MethodProp.IS_CONSTRUCTOR])
         .instructions()
-        .with_called_function_name("selfdestruct")
+        .with_callee_function_name("selfdestruct")
         .exec(1)
     )
 

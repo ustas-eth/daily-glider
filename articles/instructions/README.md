@@ -22,7 +22,7 @@ def query():
         .with_one_property([MethodProp.PUBLIC, MethodProp.EXTERNAL])
         .instructions()
         .external_calls()
-        .with_called_function_name("transferFrom")
+        .with_callee_function_name("transferFrom")
         .exec(10)
     )
 
@@ -64,7 +64,7 @@ def query():
         .with_one_property([MethodProp.PUBLIC, MethodProp.EXTERNAL])
         .instructions()
         .external_calls()
-        .with_called_function_name("transferFrom")
+        .with_callee_function_name("transferFrom")
         .exec(1, 1)
     )
 

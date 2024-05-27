@@ -1,5 +1,8 @@
 # Low-Level Data (part 2)
 
+> [!WARNING]
+> UPD. The propery was deprecated
+
 Continuing yesterday's article, today we'll talk about the `.instruction_data` property of an `Instruction`. I find it very helpful when dealing with instructions, and I use it a lot. The property is quite complex, though; sometimes, it's not very obvious how to process the information it gives.
 
 ## instruction_data
@@ -34,9 +37,6 @@ def query():
 
     return result
 ```
-
-> [!WARNING]
-> UPD. Change `.instruction_data` to `.instruction_data()` if you run this query on the mainnet Glider because it's now a method.
 
 It returns the following JSON:
 

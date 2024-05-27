@@ -8,7 +8,7 @@ To be precise, it is:
 2. Functions
 3. Modifiers
 4. Instructions
-5. Variables
+5. StateVariables
 
 Each has many methods, and more importantly, you can combine them in the same query, filtering out unnecessary entities and improving the subsequent arbitrary logic part.
 
@@ -26,7 +26,7 @@ def query():
         Functions()
         .without_properties([MethodProp.HAS_MODIFIERS])
         .instructions()
-        .with_called_function_name("selfdestruct")
+        .with_callee_function_name("selfdestruct")
         .exec(100)
     )
 
@@ -45,7 +45,7 @@ All the possible transitions (pay attention to the directions):
 ```mermaid
 flowchart TD
     Contracts <--> Functions
-    Contracts -.-> Variables*
+    Contracts -.-> StateVariables*
 
     Functions --> Modifiers
     Functions <--> Instructions
@@ -54,10 +54,7 @@ flowchart TD
     Modifiers --> Contracts
 ```
 
-_\*You can get `Variables` from a `Contract` instance_
-
-> [!WARNING]
-> UPD. It's now `StateVariables` on the mainnet (newer) version of Glider and in the documentation; keep in mind that there are differences between the versions.
+_\*You can get `StateVariables` from a `Contract` instance_
 
 E.g., if you add `.functions()` to the glide above, you'll get `List[Function]`, where each is without modifiers and contains `selfdestruct` as one of their instructions.
 
@@ -71,7 +68,7 @@ def query():
         Functions()
         .without_properties([MethodProp.HAS_MODIFIERS])
         .instructions()
-        .with_called_function_name("selfdestruct")
+        .with_callee_function_name("selfdestruct")
         .functions()
         .exec(100)
     )
