@@ -159,3 +159,5 @@ Also, try to change the glide to something more precise, like getting all `Merkl
 ![comparison](./media/comparison.png)
 
 This will help you understand how to generalize your code for different contexts.
+
+## Read next: [Handy Scripts and SQL Queries](../handy-scripts/README.md)
