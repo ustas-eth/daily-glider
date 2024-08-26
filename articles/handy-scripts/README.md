@@ -32,7 +32,7 @@ main();
 
 It doesn't require anything other than a vanilla NodeJS (I use v20).
 
-Just hit the "Copy" button in the bottom right corner and paste it into `./rawAddresses.txt` (create the folders).
+Just hit the "Copy" button in the bottom right corner and paste it into `./rawAddresses.txt`.
 
 ![Copy Button](./media/copy.png)
 
