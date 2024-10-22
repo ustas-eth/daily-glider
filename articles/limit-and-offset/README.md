@@ -12,7 +12,9 @@ def query():
 
 ```
 
-The first thing you'll probably notice after you try this query is the number of contracts - more than 4000! To keep it simple, let's limit this number:
+The first thing you'll probably notice after you try this query is the number of contracts - more than 4000! You can see it in the Performance tab.
+
+To keep it simple, let's limit this number:
 
 ```python
 from glider import *
@@ -24,9 +26,9 @@ def query():
 
 ```
 
-The `.exec()` part always has two parameters: limit and offset. In this case, the first is the number of contracts you want to get, and the second is the number of contracts you want to skip.
+The `.exec()` part has two parameters: limit and offset. The first is the number of contracts you want to get, and the second is the number of contracts you want to skip. You can write only the limit and drop the offset (as we did above), then the offset will be 0.
 
-Imagine you have a total pool of 4000 contracts:
+To get a better intuition about them, imagine you have a total pool of 4000 contracts:
 
 ```
 =================================================

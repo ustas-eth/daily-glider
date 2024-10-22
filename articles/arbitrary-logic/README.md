@@ -17,7 +17,7 @@ This time, we're going to add more logic to it besides the initial request to th
 
 ## Modifications
 
-To begin with, let's add an additional variable between the two other instructions and change the return statement to this variable:
+To begin with, let's add a for loop and change the return statement using the trick from [Get Started](../get-started/README.md) to return an empty array:
 
 ```python
 from glider import *
@@ -26,34 +26,17 @@ from glider import *
 def query():
     contracts = Contracts().with_name("ERC721").exec(10)
 
-    result = []
+    for contract in contracts:
+        contract
 
-    return result
+    return []
 ```
 
-We will save the properties there.
+Doesn't make much sense at the moment because it just returns nothing :D
 
-Next, we'll add a for loop, which will append contracts to the `result` variable:
+Anyway, the important difference is that now we have individual access to every `Contract` instance from our DB request. What can we do with it? Let's check the [Contract API documentation](https://glide.gitbook.io/main/api/contract)... `Contract.events()` looks promising if we want to get all the events of the contracts.
 
-```python
-from glider import *
-
-
-def query():
-    contracts = Contracts().with_name("ERC721").exec(10)
-
-    result = []
-    for contract in contracts:
-        result.append(contract)
-
-    return result
-```
-
-This doesn't make much sense at the moment because the result of this glide is identical to the one without these modifications :D
-
-Anyway, now we have individual access to every `Contract` instance from our DB request. What can we do with it? Let's check the [Contract API documentation](https://glide.gitbook.io/main/api/contract)... `Contract.events()` looks promising.
-
-Add the method call:
+Add the method call and wrap it in `print()`:
 
 ```python
 from glider import *
@@ -62,23 +45,22 @@ from glider import *
 def query():
     contracts = Contracts().with_name("ERC721").exec(10)
 
-    result = []
     for contract in contracts:
-        result.append(contract.events())
+        print(contract.events())
 
-    return result
+    return []
 ```
 
 And hit the run button!
 
-Oops, an error :) `TypeError: Object of type Event is not JSON serializable` means we're trying to put something wrong to the output.
+Oops, we got something strange in the output :)
 
-As you can see in the documentation, the method returns `List[Event]` type. I'll spare your time and tell that if we try to output one `Event` it'll lead to an error again. And this means we must:
+The new `PRINT` window that you see contains technical data about the objects from the DB, but we want readable event names. I'll spare your time and tell that if we try to output one `Event` it'll lead to almost the same result again. And this means we need to:
 
 1. Save the events to a new variable.
 2. Loop through again.
 3. Call one of the `Event` properties or methods ([docs](https://glide.gitbook.io/main/api/event)) to get any serializable value, like `.name`.
-4. Change the return statement using the trick from [Get Started](../get-started/README.md)
+4. Print it instead.
 
 ```python
 from glider import *
@@ -87,14 +69,13 @@ from glider import *
 def query():
     contracts = Contracts().with_name("ERC721").exec(10)
 
-    result = []
     for contract in contracts:
         events = contract.events()
 
         for event in events:
-            result.append(event.name)
+            print(event.name)
 
-    return [{"result": result}]
+    return []
 ```
 
 And our beautiful glide is done! It'll output all the event names from the first ten contracts in the DB with the "ERC721" name:

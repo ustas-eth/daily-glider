@@ -12,7 +12,7 @@ First things first, get familiar with these links; you'll need to use them quite
 
 ## Hello, world!
 
-After registering on the website, you'll see `MY QUERIES` on the left. Click `New Query` and give it some name, then copy and insert this:
+After registering on the website, you'll see `QUERY EXPLORER` on the left. Click `New Query` above and give it some name, then copy and insert this:
 
 ```python
 from glider import *
@@ -91,14 +91,6 @@ The `query()` return statement will output the object to the standard output on 
 ```python
 return []
 ```
-
-Sometimes, you need to return a string or a number. In this case, you do it like this:
-
-```python
-return [{"test_string": "abc", "test_number": 1}]
-```
-
-![Return a string and a number](./media/return.png)
 
 You'll see some examples later on.
 
