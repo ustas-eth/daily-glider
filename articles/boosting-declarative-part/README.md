@@ -45,15 +45,17 @@ All the possible transitions (pay attention to the directions):
 ```mermaid
 flowchart TD
     Contracts <--> Functions
-    Contracts -.-> StateVariables*
+    Contracts -.-> StateVariables
+    Contracts -.-> Modifiers
 
     Functions <--> Instructions
+    Functions <-.-> Modifiers
 
     Modifiers <--> Instructions
-    Modifiers <--> Contracts
+    Modifiers --> Contracts
 ```
 
-_\*You can get `StateVariables` from a `Contract` instance or use as the first entry_
+_\*Weak dash links mean that you can't transit directly but need to loop and go through each single instance. For example, you can get `StateVariables` from a `Contract` instance. Similarly, you can get `Modifiers` from a `Function` and `Functions` from a `Modifier`._
 
 E.g., if you add `.functions()` to the glide above, you'll get `List[Function]`, where each is without modifiers and contains `selfdestruct` as one of their instructions.
 
