@@ -41,7 +41,7 @@ Step by step:
 
 One of the most useful functions is `print()`, which obviously prints objects using the default output. It allows you to quickly look up what type of object you are trying to deal with or return things immediately without temporary variables.
 
-For example, look at one of the previous glides from [Arbitrary Logic](../arbitrary-logic/README.md), modified to print instead of appending to the result array:
+For example, look at one of the previous glides from [Arbitrary Logic](../arbitrary-logic/README.md):
 
 ```python
 from glider import *
@@ -50,22 +50,20 @@ from glider import *
 def query():
     contracts = Contracts().with_name("ERC721").exec(10)
 
-    result = []
     for contract in contracts:
         events = contract.events()
 
         for event in events:
-            # result.append(event.name)
             print(event.name)
 
-    return [{"result": result}]
+    return []
 ```
 
-The execution output is almost the same:
+The new window that you see under the results is where all the print output will appear:
 
 ![Result](./media/result1.png)
 
-But with `print()`, you can also do this:
+`print()` is very vercatile, you can print this as well:
 
 ```python
 from glider import *
@@ -74,16 +72,14 @@ from glider import *
 def query():
     contracts = Contracts().with_name("ERC721").exec(10)
 
-    result = []
     for contract in contracts:
         events = contract.events()
 
         for event in events:
-            # result.append(event.name)
             # print(event.name)
             print(event)
 
-    return [{"result": result}]
+    return []
 ```
 
 ![Result 2](./media/result2.png)
@@ -96,18 +92,20 @@ from glider import *
 
 def query():
     contracts = Contracts().with_name("ERC721").exec(10)
+    print("Contracts:")
+    print(contracts)
 
-    result = []
+    print("Events:")
     for contract in contracts:
         events = contract.events()
         print(events)
 
-    return [{"result": result}]
+    return []
 ```
 
 ![Result 3](./media/result3.png)
 
-As you can see, it's not trying to serialize objects but returns their classes, such as `api.event.Event`, avoiding errors when serialization is not possible.
+As you can see, it's not trying to serialize objects but returns their classes, such as `api.event.Event`, avoiding errors when serialization is not possible. This helps a lot as you can now see what you're dealing with and find all the necessary references in the documentation.
 
 ## Try/except
 

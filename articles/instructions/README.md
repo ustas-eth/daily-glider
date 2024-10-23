@@ -6,9 +6,9 @@ From `Instructions`, you can filter out:
 
 - Calls by type (external, delegate, static, low-level, internal...)
 - Calls by name (exact, negative, signature, prefix, suffix)
-- Conditions
 - Assembly
 - Entry points
+- Other common types of instructions (conditions, loops, variable assignments...)
 
 # Example
 
@@ -50,7 +50,7 @@ function transferFromERC20(IERC20 _token,uint256 _amount)
 }
 ```
 
-I have no idea what this example is supposed to do, why they use payable, why there's a redundant balance check :D But we can try to get the contract's source code; it's quite easy even without Etherscan (Kovan is deprecated).
+I have no idea what this example is supposed to do, why they use payable, or why there's a redundant balance check :D But we can try to get the contract's source code; it's quite easy even without Etherscan (Kovan is deprecated).
 
 Remember the [Debug Technique](../debug-technique/README.md)? Well, our contract is located on offset 1, so we have to change the `.exec()`, plus add a `print()` to the arbitrary part where we will first step up to the parent function and then to the contract, getting its source code:
 
@@ -94,6 +94,7 @@ function transferERC20(
 }
 ```
 
-And now I want to find them on the mainnet!
+~~And now I want to find them on the mainnet!~~
+UPD. Couldn't find them, mystery solved :(
 
 ## Read next: [Contracts](../contracts/README.md)

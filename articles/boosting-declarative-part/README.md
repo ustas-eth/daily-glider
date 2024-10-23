@@ -47,14 +47,13 @@ flowchart TD
     Contracts <--> Functions
     Contracts -.-> StateVariables*
 
-    Functions --> Modifiers
     Functions <--> Instructions
 
     Modifiers <--> Instructions
-    Modifiers --> Contracts
+    Modifiers <--> Contracts
 ```
 
-_\*You can get `StateVariables` from a `Contract` instance_
+_\*You can get `StateVariables` from a `Contract` instance or use as the first entry_
 
 E.g., if you add `.functions()` to the glide above, you'll get `List[Function]`, where each is without modifiers and contains `selfdestruct` as one of their instructions.
 

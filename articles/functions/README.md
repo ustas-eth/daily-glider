@@ -35,7 +35,6 @@ def query():
         result.append(function)
 
     return result
-
 ```
 
 This glide returns all functions with the name `deposit*` or `withdraw*`, at least one argument of the `address` type, public or external visibility, and without any modifiers.
@@ -61,8 +60,21 @@ The `Functions` object has three methods to filter by the special `MethodProp` p
 - `.with_one_property()`: at least one of the properties should be true
 - `.without_properties()`: the opposite of the first one; each property should be false
 
-You can apply different combinations. The query will return nothing if there is a conflict (e.g., you put `MethodProp.HAS_STATE_VARIABLES_WRITTEN` and `MethodProp.IS_PURE` in `.with_all_properties()`, which obviously is impossible).
+You can apply different combinations. The query will return nothing if there is a conflict (e.g., you put `MethodProp.HAS_STATE_VARIABLES_WRITTEN` and `MethodProp.IS_PURE` in `.with_all_properties()`, which is obviously impossible).
 
 See the complete list of properties in the [documentation](https://glide.gitbook.io/main/api/callables/methodprop).
+
+<details>
+<summary>Mainnet note</summary>
+
+These three functions are still available on mainnet, but they are deprecated in favor of the `FunctionFilters` class and its `.with_properties()` method. You can combine `FunctionFilters` to create more complex filters, like the following:
+
+```
+.with_properties((FunctionFilters.IS_EXTERNAL | FunctionFilters.IS_PUBLIC) & FunctionFilters.HAS_GLOBAL_VARIABLES_READ & FunctionFilters.IS_PAYABLE & ~FunctionFilters.IS_CONSTRUCTOR)
+```
+
+This will return all external and public functions that have global variables read, are payable, and are not constructors.
+
+</details>
 
 ## Read next: [Instructions](../instructions/README.md)
