@@ -2,14 +2,14 @@
 
 We've covered the object a little in the previous articles, so you should already be quite familiar with it.
 
-Anyway, `Contracts` is the starting point of a declarative query, the highest level, and the smallest number of instances. You can filter contracts by the following parameters:
+Anyway, `Contracts` is the starting point of a declarative query, the highest level, and the smallest number of instances since it includes all the other objects. You can filter contracts by the following parameters:
 
 - Names (exact, negative, prefix, suffix, regexp)
 - Compiler versions (by range, e.g., 0.6.0 - 0.8.25)
 - Error and event names and signatures
 - Function names
 - Struct names and nested types
-- Interfaces and main (high-level) contracts
+- Interfaces or main (high-level) contracts
 
 ## Example
 
@@ -36,7 +36,7 @@ def query():
 
 ```
 
-Check a contract from the result: https://gist.github.com/ustas-eth/ff309a6a07b56fee0fda4e68caf1bb47
+Check the first contract from the result: https://gist.github.com/ustas-eth/ff309a6a07b56fee0fda4e68caf1bb47
 
 The pragma version is 0.8.1, and it has a struct with the name `Config`, too, just as requested:
 

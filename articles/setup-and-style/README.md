@@ -4,7 +4,7 @@ Today, we will talk about the maintainability of your glides.
 
 I know this is not the most exciting thing to read about, and I should've written about it after the first article, but I'd like to cover this topic before we get to more complex arbitrary code.
 
-Glides require updates sometimes to cover a new version of Solidity or a library. And you don't want to spend the entire morning analyzing the glide you made six months ago, do you?
+Glides sometimes require updates to cover a new version of Solidity or a library. And you don't want to spend the entire morning analyzing the glide you made six months ago, do you?
 
 ## Setup
 
@@ -12,12 +12,13 @@ Let's start with what I usually use to keep my code clean.
 
 - VS Code (or rather [VS Codium](https://vscodium.com/))
 - [Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter) (any other formatter for Python will do as well)
-- [JSON Formatter](https://marketplace.visualstudio.com/items?itemName=ClemensPeters.format-json)
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- ~~[JSON Formatter](https://marketplace.visualstudio.com/items?itemName=ClemensPeters.format-json)~~
+- ~~[Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)~~
 
 A Python formatter is a must because the editor on the website doesn't have one built-in (work in progress).
 
-You need the last two to deal with the copied Glider output. Sometimes, it's messy, but it can be quickly improved with these two plugins.
+~~You need the last two to deal with the copied Glider output. Sometimes, it's messy, but it can be quickly improved with these two plugins.~~
+UPD. The output improved quite a bit and now you can enjoy it without any plugins.
 
 ## Writing style
 
@@ -77,7 +78,7 @@ def query():
 
 ## Functions
 
-Sometimes, when a glide becomes too bloaty, I break it into functions to abstract a little. There's a big downside right now, unfortunately. The profiler only works on the main `query()` function, though it'll still show you the overall performance of an inner function in the place where you call it. The next lesson will probably be about the profiler.
+Sometimes, when a glide becomes too bloaty, I break it into functions to abstract a little. There's a big downside right now, unfortunately. The profiler only works on the main `query()` function, though it'll still show you the overall performance of an inner function in the place where you call it.
 
 ```python
 from glider import *

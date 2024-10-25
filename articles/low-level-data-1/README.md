@@ -1,5 +1,8 @@
 # Low-Level Data (part 1)
 
+> [!WARNING]
+> UPD. The method was deprecated
+
 Your proficiency with `Instruction` and `Function` can be significantly increased if you know how to look into the deeper level of what they contain.
 
 Today, I'll introduce you to the `.dump_into_json()` method.
