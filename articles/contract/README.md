@@ -110,6 +110,6 @@ def query():
 
 ```
 
-> Don't forget to add `.exec()` after these methods because they return `Contracts` too. It's the same as with the declarative query in the beggining of glides, you can change the limit and the offset or add more filtration or descend to functions/instructions.
+> Don't forget to add `.exec()` after these methods because they return `Contracts` too. It's the same as with the declarative query in the beginning of glides, you can change the limit and the offset or add more filtration or descend to functions/instructions.
 
 ## Read next: [Function](../function/README.md)
